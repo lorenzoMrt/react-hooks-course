@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Loading from "./components/Loading";
 import Nav from "./components/Nav";
 import { ThemeProvider } from "./contexts/theme";
+
 import "./index.css";
 
 const Popular = React.lazy(() => import("./components/Popular"));
@@ -15,6 +16,7 @@ function App() {
   function toggleTheme() {
     setTheme((theme) => (theme === "light" ? "dark" : "light"));
   }
+
   return (
     <Router>
       <ThemeProvider value={theme}>
